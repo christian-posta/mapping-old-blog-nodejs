@@ -12,7 +12,7 @@ http.createServer(function(req,res){
     if( query.p != null && mapping) {
         res.writeHead(302, { 'Location': mapping});
         res.end();
-    }else (query_parts.pathname == '/not-gonna-happen'){
+    }else if(query_parts.pathname == '/not-gonna-happen'){
         res.writeHead(302, { 'Location': 'http://blog.christianposta.com/microservices/youre-not-going-to-do-microservices/'});
         res.end();
     }
